@@ -5,7 +5,9 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  
+
+  const callBackend = (msg: string) => webui.backendCall(msg)
+
   return (
     <>
       <div>
@@ -20,6 +22,9 @@ function App() {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={() => callBackend("hellope")}>
+          Send Message to Backend
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
