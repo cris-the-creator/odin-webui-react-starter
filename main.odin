@@ -5,6 +5,7 @@ import ui "webui"
 
 main :: proc() {
 	w := ui.new_window()
-	ui.show(w, "<html>WebUI test</html>")
+	ui.set_root_folder(w, "./gui/dist")
+	ui.show(w, "index.html")
 	ui.wait()
 }
